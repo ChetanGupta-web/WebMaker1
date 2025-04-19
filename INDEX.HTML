@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Homepage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #222;
+            color: #f5f5f5;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: #2c2c2c;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav a {
+            color: white;
+            padding: 1rem;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: #1abc9c;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .hero {
+            background-color: #333;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            color: #1abc9c;
+            margin-bottom: 1rem;
+        }
+        
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        
+        .feature-card {
+            background-color: #333;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            padding: 1.5rem;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-card h3 {
+            color: #1abc9c;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-button {
+            background-color: #1abc9c;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+            padding: 0.75rem 1.5rem;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #16a085;
+        }
+        
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        #current-time {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            color: #1abc9c;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        #contact-form {
+            max-width: 500px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: #333;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #444;
+            border-radius: 4px;
+            background-color: #444;
+            color: white;
+        }
+        
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #1abc9c;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WELCOME TO WEBMAKER</h1>
+        <div id="current-time"></div>
+    </header>
+    
+    <nav>
+        <a href="#" id="home-link">Home</a>
+        <a href="#" id="about-link">About</a>
+        <a href="#" id="services-link">Services</a>
+        <a href="#" id="contact-link">Contact</a>
+    </nav>
+    
+    <main>
+        <section id="home-section">
+            <div class="hero">
+                <h2>Creating Amazing Web Experiences</h2>
+                <p>Welcome to my WEBMAKER homepage. I'm passionate about web development and creating beautiful, functional websites.</p>
+                <p>Explore my site to learn more about what I can do for you.</p>
+                <button class="cta-button" id="learn-more">Learn More</button>
+            </div>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Web Design</h3>
+                    <p>Clean, responsive designs that look great on any device. I focus on creating engaging user experiences.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Development</h3>
+                    <p>Robust and efficient code that brings your website to life with smooth animations and interactions.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>SEO Optimization</h3>
+                    <p>Ensure your website ranks well in search engines and reaches your target audience effectively.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about-section" class="hidden">
+            <div class="hero">
+                <h2>About Me</h2>
+                <p>I'm a web developer with over 5 years of experience in creating beautiful, functional websites.</p>
+                <p>My approach combines technical expertise with creative design to deliver exceptional results.</p>
+            </div>
+        </section>
+        
+        <section id="services-section" class="hidden">
+            <div class="hero">
+                <h2>My Services</h2>
+                <p>I offer a range of web development services to help your business succeed online.</p>
+            </div>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Custom Website Development</h3>
+                    <p>Tailor-made websites designed to meet your specific business needs.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>E-commerce Solutions</h3>
+                    <p>Robust online stores with secure payment processing and inventory management.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Website Maintenance</h3>
+                    <p>Regular updates and maintenance to keep your website secure and performing optimally.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact-section" class="hidden">
+            <div class="hero">
+                <h2>Contact Me</h2>
+                <p>Have a project in mind? Get in touch and let's discuss how I can help you.</p>
+            </div>
+            
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 My Homepage. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Update current time
+        function updateTime() {
+            const now = new Date();
+            const timeElement = document.getElementById('current-time');
+            timeElement.textContent = now.toLocaleTimeString();
+        }
+        
+        // Call updateTime every second
+        updateTime();
+        setInterval(updateTime, 1000);
+        
+        // Navigation
+        const homeLink = document.getElementById('home-link');
+        const aboutLink = document.getElementById('about-link');
+        const servicesLink = document.getElementById('services-link');
+        const contactLink = document.getElementById('contact-link');
+        
+        const homeSection = document.getElementById('home-section');
+        const aboutSection = document.getElementById('about-section');
+        const servicesSection = document.getElementById('services-section');
+        const contactSection = document.getElementById('contact-section');
+        
+        homeLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            homeSection.classList.remove('hidden');
+            aboutSection.classList.add('hidden');
+            servicesSection.classList.add('hidden');
+            contactSection.classList.add('hidden');
+        });
+        
+        aboutLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            homeSection.classList.add('hidden');
+            aboutSection.classList.remove('hidden');
+            servicesSection.classList.add('hidden');
+            contactSection.classList.add('hidden');
+        });
+        
+        servicesLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            homeSection.classList.add('hidden');
+            aboutSection.classList.add('hidden');
+            servicesSection.classList.remove('hidden');
+            contactSection.classList.add('hidden');
+        });
+        
+        contactLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            homeSection.classList.add('hidden');
+            aboutSection.classList.add('hidden');
+            servicesSection.classList.add('hidden');
+            contactSection.classList.remove('hidden');
+        });
+        
+        // Learn more button
+        const learnMoreButton = document.getElementById('learn-more');
+        learnMoreButton.addEventListener('click', function() {
+            homeSection.classList.add('hidden');
+            aboutSection.classList.remove('hidden');
+            servicesSection.classList.add('hidden');
+            contactSection.classList.add('hidden');
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // In a real application, you would send this data to a server
+            alert(`Thank you, ${name}! Your message has been received. We'll contact you at ${email} soon.`);
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>
